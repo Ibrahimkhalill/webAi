@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<style>
+    #container {
+    justify-content: center;
+
+}
+
+</style>
+<br>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<div class="container col-md-8 mt-1" >
+    <h3 style="text-align: center;">The Result</h3>
+    <div class="card mt-2" style="height: 300px; width:auto; border: 2px solid black; border-radius: 10px;">
+        <br>
+        <br>
+        <br>
+        <br>
+       
+        <div id="container" class="mr-2"></div>
+    </div>
+   <a href="{% url 'home' %}" class="btn btn-outline-dark mt-3" style="display:flex; justify-content: center;">Try  Again</a>
+</div>
+
+
+<script >
+Highcharts.chart('container', {
+    chart: {
+        inverted: true,
+        height: 100,
+        events: {
+            load: function() {
+                var yAxis = this.yAxis[0],
+                    y = this.plotTop + this.plotHeight / 2,
+                    center = yAxis.toPixels(0);
+
+                this.renderer.path([
+                    'M', this.plotLeft, y, 'L', center, y
+                ]).attr({
+                    'stroke-width': 10,
+                    stroke: '#a8e063'
+                }).add();
+
+                this.renderer.path([
+                    'M', center, y, 'L', this.plotSizeY + this.plotLeft, y
+                ]).attr({
+                    'stroke-width': 10,
+                    stroke: '#ff3300'
+                }).add();
+            }
+        }
+    },
+    title: {
+        text: ''
+    },
+    credits: {
+        enabled: false
+    },
+    legend: {
+        enabled: false
+    },
+    yAxis: {
+        title: {
+            text: ''
+        },
+        tickPositions: [-1, 0, 1],
+        gridLineWidth: 0
+    },
+    xAxis: {
+        visible: false
+    },
+    series: [{
+        type: 'scatter',
+        data: [{{val}}],
+        marker: {
+            
+            fillColor: 'Black',
+            radius: 10
+        }
+    }]
+})
+
+</script>
+{% endblock main_content %}
+

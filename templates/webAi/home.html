@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<br>
+<h3 class="container col-md-8" style="text-align: center;">
+    Input Form Title
+</h3>
+<div class="container mt-4 col-md-8 ">
+    <div class="card" style="border: 1.5px solid black; border-radius: 10px; background-color:#ffffff">
+        <form method="post" class="container form-group mt-4" action="{% url 'submit_data' %}">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col">
+                    
+                    <label for="">Input 1</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" name="input1" required class="form-control" 
+                          />
+                </div>
+                <div class="col">
+                    <label for="">Input 2</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input2">
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <label for="">Input3 </label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input3" 
+                          />
+                </div>
+                <div class="col">
+                    <label for="">Input 4</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input4">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="">Input 5</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input5">
+                </div>
+                <div class="col">
+                    <label for="">Input 6</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input6">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="">Input 7</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input7">
+                </div>
+                <div class="col">
+                    <label for="">Input 8</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input8">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="">Input 9</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input9">
+                </div>
+                <div class="col">
+                    <label for="">Input 10</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input10">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="">Input 11</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input11">
+                </div>
+                <div class="col">
+                    <label for="">Input 12</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input12">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="">Input 13</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input13">
+                </div>
+                <div class="col">
+                    <label for="">Input 14</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input14">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="">Input 15</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input15">
+                </div>
+                <div class="col">
+                    <label for="">Input 16</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input16">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="">Input 17</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input17">
+                </div>
+                <div class="col">
+                    <label for="">Input 18</label>
+                    <input type="number" placeholder="Float Number Ex- 234.49" class="form-control" required name="input18">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="">Input 19</label>
+                    <input type="number" placeholder="Integer Number Ex- 123" class="form-control" required name="input19">
+                </div>
+
+                <div class="col">
+
+                    <label for="">Input 20</label>
+
+                    <select name="input20" class="form-select form-control" id="floatingSelect" aria-label="Floating label select example">
+                        <option value="0" selected>Gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+
+                    
+                </div>
+            </div>
+            <br>
+            <hr>
+            
+            <button type="submit" class="btn btn-outline-dark mr-3 form-control">SEE RESULT</button>
+
+        </form>
+    </div>
+</div>
+{% endblock main_content %}
